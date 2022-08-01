@@ -31,8 +31,8 @@ function App() {
 						<Route path="/" element={<Login updateUser={updateUser} />} />
 						<Route path="/register" element={<Register updateUser={updateUser} />} />
 						<Route path="/homepage" element={login && login._id ? <Homepage login={login.username} updateUser={updateUser} /> : <Login setLogin={setLogin} />} />
-						{/* <Route path="/sell" element={<Sell login={login.username} updateUser={updateUser} />} /> */}
-						{/* <Route path="/delete" element={<Removecycle login={login.username} updateUser={updateUser} />} /> */}
+						<Route path="/sell" element={<Sell login={login.username} updateUser={updateUser} />} />
+						<Route path="/delete" element={<Removecycle login={login.username} updateUser={updateUser} />} />
 					</Routes>
 				</Router>
 			</div>
