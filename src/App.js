@@ -25,7 +25,7 @@ function App() {
 	// const 
 	return (
 		<React.Fragment>
-			{login.username && <div className="App">
+			<div className="App">
 				<Router>
 					<Routes>
 						<Route path="/" element={<Login updateUser={updateUser} />} />
@@ -35,7 +35,7 @@ function App() {
 						<Route path="/delete" element={<Removecycle login={login.username} updateUser={updateUser} />} />
 					</Routes>
 				</Router>
-			</div>}
+			</div>
 		</React.Fragment>
 	);
 }
