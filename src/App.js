@@ -4,22 +4,22 @@ import Register from "./Components/Register";
 import Homepage from "./Components/Homepage";
 import Sell from "./Components/Sell";
 import './App.css'
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Removecycle from "./Components/Removecycle";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 	const [login, setLogin] = useState({})
 
-	useEffect(() => {
+	useEffect(useCallback(() => {
 		setLogin(JSON.parse(localStorage.getItem("CurrentUser")))
-	}, [localStorage])
+	}, [localStorage]), [])
 
 	const updateUser = (login) => {
 		localStorage.setItem("CurrentUser", JSON.stringify(login))
 		setLogin(login)
 	}
-	console.log(login.username);
+
 	// const test = "Heloo"
 	// const name = username
 	// const 
