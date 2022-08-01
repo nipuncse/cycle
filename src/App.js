@@ -25,7 +25,7 @@ function App() {
 	// const 
 	return (
 		<React.Fragment>
-			{login && <div className="App">
+			{login.username && <div className="App">
 				<Router>
 					<Routes>
 						<Route path="/" element={<Login updateUser={updateUser} />} />
