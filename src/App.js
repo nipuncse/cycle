@@ -9,7 +9,10 @@ import Removecycle from "./Components/Removecycle";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-	const [login, setLogin] = useState({})
+	const [login, setLogin] = useState({
+		username: "",
+		password: ""
+	})
 
 	useEffect(useCallback(() => {
 		setLogin(JSON.parse(localStorage.getItem("CurrentUser")))
